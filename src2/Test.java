@@ -10,7 +10,11 @@ class Test {
 
         return total/numbers.length;
     }
+    
     public static void main(String[] args) {
+        Test t = new Test();
+        System.out.println(t);
+
 //        System.out.println("Hello");
         System.out.println(average(3, 3.5, 3.2, 1.1));
 

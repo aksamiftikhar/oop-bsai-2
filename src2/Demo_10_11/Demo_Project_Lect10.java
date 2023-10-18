@@ -1,3 +1,5 @@
+package Demo_10_11;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -16,17 +18,17 @@ public class Demo_Project_Lect10 {
         int choice;
         do {
             System.out.println("\n--- Hospital Management System ---");
-            System.out.println("1. Register Doctor");
-            System.out.println("2. Register Patient");
-            System.out.println("3. Create Department");
-            System.out.println("4. Assign Doctor to Department");
-            System.out.println("5. Add Doctor Availability");
-            System.out.println("6. Schedule Appointment");
-            System.out.println("7. Add Notes to Appointment");
+            System.out.println("1. Register Demo_10.Doctor");
+            System.out.println("2. Register Demo_10.Patient");
+            System.out.println("3. Create Demo_10.Department");
+            System.out.println("4. Assign Demo_10.Doctor to Demo_10.Department");
+            System.out.println("5. Add Demo_10.Doctor Availability");
+            System.out.println("6. Schedule Demo_10.Appointment");
+            System.out.println("7. Add Notes to Demo_10.Appointment");
             System.out.println("8. View Appointments");
-            System.out.println("9. Admit Patient");
-            System.out.println("10. Discharge Patient");
-            System.out.println("11. View Bed Occupancy in Wards");
+            System.out.println("9. Admit Demo_10.Patient");
+            System.out.println("10. Discharge Demo_10.Patient");
+            System.out.println("11. View Demo_10.Bed Occupancy in Wards");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
@@ -76,33 +78,33 @@ public class Demo_Project_Lect10 {
     }
 
     private static void registerDoctor() {
-        System.out.print("Enter Doctor's Name: ");
+        System.out.print("Enter Demo_10.Doctor's Name: ");
         String name = scanner.nextLine();
-        System.out.print("Enter Doctor's Age: ");
+        System.out.print("Enter Demo_10.Doctor's Age: ");
         int age = scanner.nextInt();
-        System.out.print("Enter Doctor's Specialization: ");
+        System.out.print("Enter Demo_10.Doctor's Specialization: ");
         String specialization = scanner.next();
         Doctor doctor = new Doctor(name, age, specialization);
         doctors.add(doctor);
-        System.out.println("Doctor Registered Successfully with ID: " + doctor.getDoctorId());
+        System.out.println("Demo_10.Doctor Registered Successfully with ID: " + doctor.getDoctorId());
     }
 
     private static void registerPatient() {
-        System.out.print("Enter Patient's Name: ");
+        System.out.print("Enter Demo_10.Patient's Name: ");
         String name = scanner.nextLine();
-        System.out.print("Enter Patient's Age: ");
+        System.out.print("Enter Demo_10.Patient's Age: ");
         int age = scanner.nextInt();
         Patient patient = new Patient(name, age, "");
         patients.add(patient);
-        System.out.println("Patient Registered Successfully with ID: " + patient.getPatientId());
+        System.out.println("Demo_10.Patient Registered Successfully with ID: " + patient.getPatientId());
     }
 
     private static void createDepartment() {
-        System.out.print("Enter Department Name: ");
+        System.out.print("Enter Demo_10.Department Name: ");
         String name = scanner.nextLine();
         Department department = new Department(name);
         departments.add(department);
-        System.out.println("Department Created Successfully!");
+        System.out.println("Demo_10.Department Created Successfully!");
     }
 
     private static void assignDoctorToDepartment() {
@@ -111,7 +113,7 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < departments.size(); i++) {
             System.out.println((i + 1) + ". " + departments.get(i).getName());
         }
-        System.out.print("Select Department (by number): ");
+        System.out.print("Select Demo_10.Department (by number): ");
         int deptChoice = scanner.nextInt();
         Department selectedDept = departments.get(deptChoice - 1);
 
@@ -120,12 +122,12 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < doctors.size(); i++) {
             System.out.println((i + 1) + ". " + doctors.get(i).getName());
         }
-        System.out.print("Select Doctor to assign (by number): ");
+        System.out.print("Select Demo_10.Doctor to assign (by number): ");
         int docChoice = scanner.nextInt();
         Doctor selectedDoc = doctors.get(docChoice - 1);
 
         selectedDept.addDoctor(selectedDoc);
-        System.out.println("Doctor Assigned to Department Successfully!");
+        System.out.println("Demo_10.Doctor Assigned to Demo_10.Department Successfully!");
     }
 
     private static void addDoctorAvailability() {
@@ -134,7 +136,7 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < doctors.size(); i++) {
             System.out.println((i + 1) + ". " + doctors.get(i).getName());
         }
-        System.out.print("Select Doctor (by number): ");
+        System.out.print("Select Demo_10.Doctor (by number): ");
         int docChoice = scanner.nextInt();
         Doctor selectedDoc = doctors.get(docChoice - 1);
         System.out.print("Enter Start Time (e.g., 10:00 AM): ");
@@ -152,7 +154,7 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < doctors.size(); i++) {
             System.out.println((i + 1) + ". " + doctors.get(i).getName());
         }
-        System.out.print("Select Doctor (by number): ");
+        System.out.print("Select Demo_10.Doctor (by number): ");
         int docChoice = scanner.nextInt();
         Doctor selectedDoc = doctors.get(docChoice - 1);
 
@@ -161,16 +163,16 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < patients.size(); i++) {
             System.out.println((i + 1) + ". " + patients.get(i).getName());
         }
-        System.out.print("Select Patient (by number): ");
+        System.out.print("Select Demo_10.Patient (by number): ");
         int patChoice = scanner.nextInt();
         Patient selectedPatient = patients.get(patChoice - 1);
 
-        System.out.print("Enter Appointment Date (e.g., 12-Oct-2023): ");
+        System.out.print("Enter Demo_10.Appointment Date (e.g., 12-Oct-2023): ");
         String date = scanner.next();
 
         Appointment appointment = new Appointment(selectedPatient, selectedDoc, date);
         appointments.add(appointment);
-        System.out.println("Appointment Scheduled Successfully!");
+        System.out.println("Demo_10.Appointment Scheduled Successfully!");
     }
 
     private static void addNotesToAppointment() {
@@ -179,7 +181,7 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < appointments.size(); i++) {
             System.out.println((i + 1) + ". " + appointments.get(i).getPatient().getName() + " with " + appointments.get(i).getDoctor().getName() + " on " + appointments.get(i).getAppointmentDate());
         }
-        System.out.print("Select Appointment (by number) to add notes: ");
+        System.out.print("Select Demo_10.Appointment (by number) to add notes: ");
         int appChoice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
         Appointment selectedAppointment = appointments.get(appChoice - 1);
@@ -204,7 +206,7 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < patients.size(); i++) {
             System.out.println((i + 1) + ". " + patients.get(i).getName());
         }
-        System.out.print("Select Patient (by number) for admission: ");
+        System.out.print("Select Demo_10.Patient (by number) for admission: ");
         int patChoice = scanner.nextInt();
         Patient selectedPatient = patients.get(patChoice - 1);
 
@@ -213,7 +215,7 @@ public class Demo_Project_Lect10 {
         for (int i = 0; i < wards.size(); i++) {
             System.out.println((i + 1) + ". " + wards.get(i).getWardName());
         }
-        System.out.print("Select Ward (by number): ");
+        System.out.print("Select Demo_10.Ward (by number): ");
         int wardChoice = scanner.nextInt();
         Ward selectedWard = wards.get(wardChoice - 1);
 
@@ -221,14 +223,14 @@ public class Demo_Project_Lect10 {
         if (availableBed != null) {
             selectedPatient.setAssignedBed(availableBed);
             availableBed.occupyBed();
-            System.out.println("Patient admitted successfully and assigned Bed No: " + availableBed.getBedNumber());
+            System.out.println("Demo_10.Patient admitted successfully and assigned Demo_10.Bed No: " + availableBed.getBedNumber());
         } else {
             System.out.println("Sorry, no available bed in the selected ward.");
         }
     }
 
     private static void dischargePatient() {
-        System.out.print("Enter Patient ID for discharge: ");
+        System.out.print("Enter Demo_10.Patient ID for discharge: ");
         int patientId = scanner.nextInt();
         Patient patientToDischarge = null;
         for (Patient patient : patients) {
@@ -240,21 +242,21 @@ public class Demo_Project_Lect10 {
 
         if (patientToDischarge != null && patientToDischarge.getAssignedBed() != null) {
             patientToDischarge.releaseBed();
-            System.out.println("Patient discharged and bed released successfully.");
+            System.out.println("Demo_10.Patient discharged and bed released successfully.");
         } else {
-            System.out.println("Patient not found or not currently admitted.");
+            System.out.println("Demo_10.Patient not found or not currently admitted.");
         }
     }
 
     private static void viewBedOccupancy() {
-        System.out.println("Bed Occupancy in Wards:");
+        System.out.println("Demo_10.Bed Occupancy in Wards:");
         for (Ward ward : wards) {
-            System.out.println("Ward: " + ward.getWardName());
+            System.out.println("Demo_10.Ward: " + ward.getWardName());
             Bed[][] beds = ward.getBeds();
             for (int i = 0; i < beds.length; i++) {
                 for (int j = 0; j < beds[i].length; j++) {
                     String status = beds[i][j].isOccupied() ? "Occupied" : "Available";
-                    System.out.print("Room " + (i + 1) + ", Bed " + beds[i][j].getBedNumber() + ": " + status + " | ");
+                    System.out.print("Room " + (i + 1) + ", Demo_10.Bed " + beds[i][j].getBedNumber() + ": " + status + " | ");
                 }
                 System.out.println();
             }
@@ -329,7 +331,7 @@ class Patient {
 
 class Doctor {
     private static int counter = 0;  // static field to generate unique doctor IDs
-    private final int doctorId;  // final since ID shouldn't change
+    private final int doctorId ;  // final since ID shouldn't change
     private String name;
     private int age;
     private String specialization;
@@ -337,12 +339,35 @@ class Doctor {
     private ArrayList<TimeSlot> availableSlots;
     private String department;
 
+    private static ArrayList<String> allowedSpecializations = new ArrayList<>();
+
+    // Static initialization block
+    static {
+        allowedSpecializations.add("General");
+        allowedSpecializations.add("Cardiology");
+        allowedSpecializations.add("Neurology");
+        allowedSpecializations.add("Orthopedics");
+        System.out.println("Static init block: Allowed specializations initialized.");
+    }
+
+    // Non-static initialization block
+    {
+        System.out.println("Non-static init block: Doctor object is being created.");
+    }
+
+
     public Doctor(String name, int age, String specialization) {
         this.doctorId = ++counter;  // Increment and assign unique doctor ID
         this.name = name;
         this.age = age;
-        this.specialization = specialization;
         this.availableSlots = new ArrayList<TimeSlot>();
+        setSpecialization(specialization);
+
+    }
+
+    public Doctor(String name, int age) {
+        this(name, age, "General");  // Default to "General" specialization
+        this.name = "ab";
     }
 
     // Getters and Setters
@@ -370,9 +395,20 @@ class Doctor {
         return specialization;
     }
 
+    // Central setter for specialization
     public void setSpecialization(String specialization) {
-        this.specialization = specialization;
+        if (allowedSpecializations.contains(specialization)) {
+            this.specialization = specialization;
+        } else {
+            System.out.println("Invalid specialization. Setting to 'General'.");
+            this.specialization = "General";
+        }
     }
+
+    public static ArrayList<String> getAllowedSpecializations() {
+        return allowedSpecializations;
+    }
+
     public void addTimeSlot(TimeSlot slot) {
         this.availableSlots.add(slot);
     }
@@ -391,7 +427,7 @@ class Doctor {
 }
 
 
-// TimeSlot Class
+// Demo_10.TimeSlot Class
 class TimeSlot {
     private String startTime;
     private String endTime;
@@ -418,7 +454,7 @@ class TimeSlot {
     }
 }
 
-// Department Class
+// Demo_10.Department Class
 class Department {
     private String name;
     private ArrayList<Doctor> doctors;
