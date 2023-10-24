@@ -551,7 +551,7 @@ class Appointment {
 }
 
  class Bed {
-    private int bedNumber;
+    public int bedNumber;
     private boolean isOccupied;
 
     public Bed(int bedNumber) {

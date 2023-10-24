@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-class Test {
+public class Test {
     public static double average(int x, double ... numbers)
     {
         double total = 0;
@@ -12,6 +12,7 @@ class Test {
     }
     
     public static void main(String[] args) {
+
         Test t = new Test();
         System.out.println(t);
 
@@ -33,4 +34,17 @@ class Test {
 
 
     }
+}
+
+class A
+{
+    int x;
+}
+class B extends A
+{
+    int y;
+}
+class C
+{
+    int z;
 }
