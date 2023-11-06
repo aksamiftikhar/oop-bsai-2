@@ -10,26 +10,12 @@ public class Test {
 
         return total/numbers.length;
     }
-    
+
     public static void main(String[] args) {
 
-        Test t = new Test();
-        System.out.println(t);
-
-//        System.out.println("Hello");
-        System.out.println(average(3, 3.5, 3.2, 1.1));
-
-        // Lecture 9
-//        ArrayList<int> al;
-        ArrayList<Integer> alInt = new ArrayList<>();
-        alInt.add(40); // Auto boxing
-        alInt.add(50);
-        alInt.add(-10);
-
-        int x = alInt.get(0); //unboxing
-
-        for(int x1: alInt)
-            System.out.println(x1);
+        String str1 = new String("Java");
+        String str2 = new String("Java");
+        System.out.println(str1 == str2);
 
 
 
