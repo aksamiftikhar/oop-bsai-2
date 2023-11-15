@@ -1,7 +1,7 @@
-package Lecture_17;
+package Lecture_15;
 
 
-public class Test {
+public class Test_Interfaces_1 {
     public static void main(String[] args) {
         B.staticMethod1();
         A a1 = new B();
