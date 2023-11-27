@@ -9,7 +9,7 @@ public class Revision {
         System.out.println(i1==i2);
         ((B1)obj1).anotherMethod();
         int x = 10;
-        int y = new Integer(10);
+        int y = 10;
         System.out.println(x == y);
 
         A1 obj2 = new C1();
