@@ -55,6 +55,9 @@ public class TestFiles {
 //    int x;
 
     public static void main(String[] args) {
+        int x= 10;
+        System.out.println(String.format(":%d", x));
+//        Formatter.format("%d", x);
         File f = new File("F:/temp.txt");
         if(!f.exists())
         {
