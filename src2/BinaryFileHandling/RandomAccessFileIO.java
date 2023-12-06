@@ -49,12 +49,27 @@ public class RandomAccessFileIO {
 
 
         // read records from random access file
-        try (RandomAccessFile file = new RandomAccessFile("F:/records.dat", "r")) {
-            readRecord(file, 2); // Read the record of the second person
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try (RandomAccessFile file = new RandomAccessFile("F:/records.dat", "r")) {
+//            readRecord(file, 2); // Read the record of the second person
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
+        doSomething(1, "a", new A());
     }
+    public static <T extends Comparable<T>> int maximum(T obj1, T obj2)
+    {
+       return obj1.compareTo(obj2);
+    }
+    public static <T1, T2> T2 doSomething(T1 arg1, T2 arg2, T1 arg3)
+    {
+        T1 t_local;
+
+        return arg2;
+    }
+
+}
+class A
+{
 
 }
