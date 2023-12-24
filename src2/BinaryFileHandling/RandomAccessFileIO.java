@@ -55,7 +55,7 @@ public class RandomAccessFileIO {
 //            e.printStackTrace();
 //        }
 
-        doSomething(1, "a", new A());
+        doSomething(1, "a", new AA());
     }
     public static <T extends Comparable<T>> int maximum(T obj1, T obj2)
     {
@@ -69,7 +69,7 @@ public class RandomAccessFileIO {
     }
 
 }
-class A
+class AA
 {
 
 }

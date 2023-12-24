@@ -45,5 +45,9 @@ public class GenericStack<E> {
         gs.push("2");
 
 
+
+
     }
-  }
+}
+
+
